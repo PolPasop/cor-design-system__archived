@@ -7,5 +7,5 @@ eleventyNavigation:
   key: Home
   order: 0
 ---
-# CoR website design system
 
+# CoR Web Style guide
