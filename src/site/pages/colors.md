@@ -9,20 +9,25 @@ eleventyNavigation:
 
 ## Colour contrast
 
+---
+
 ### CoR Website requirement
 
-You must make sure that the contrast ratio of text and interactive elements meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+**Text should have contrast ratio of at least 4.5:1**
 
-The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
+Make sure that there’s enough colour contrast in your designs; the contrast ratio between a text and its background should be at least 4.5:1. This helps low vision users in particular.
 
-- **Large Text**: Large-scale text (18 pt, or 14pt and bold) and images of large-scale text have a contrast ratio of at least 3:1;
+There is an exception for large or bold text. Text that is larger than 24px or bold text that is larger than 18px should have a contrast ratio of at least 3:1.
+
+- [level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+
+---
 
 ### What does this mean for web accessibility?
 
 On the web, the use of complementary colors is about finding shades that provide enough contrast between content and the background for anyone with low vision impairments and color deficiencies.
 
 This doesn't mean colors should only be limited to contrasting colors, but instead that care should be taken to ensure a level of contrast in body text, logos, and essential diagrams or other pieces of content. There are a number of tools to help designers and developers check color contrast, including these listed below:
-
 
 ### Tools
 
@@ -43,7 +48,6 @@ The level to which a pair of colors are contrasted is measured with a grade syst
 - The larger the font and wider the stroke, the more legible it will be with lower contrast. Therefore the contrast requirement for larger font is lower. W3C recommends starting at 18pt regular weight or 14pt bold text.
 
 - Steer clear of text-based images and use text wherever possible. If that's not possible, consider using a high resolution for text images. Speaking of text images, don't forget to fill out the alt text.
-
 
 ## Sources
 
