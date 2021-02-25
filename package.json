@@ -16,5 +16,8 @@
     "start": "npm run dev",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.1.6"
   }
 }

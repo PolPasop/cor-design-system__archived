@@ -1,18 +1,12 @@
-# Accessibility
+---
+layout: layouts/base.njk
+title: Images
+permalink: /images.html
+eleventyNavigation:
+  key: Images
+  order: 2
+---
 
-## Colours contrast
-
-You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
-
-The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
-
-- **Large Text**: Large-scale text (18 pt, or 14pt and bold) and images of large-scale text have a contrast ratio of at least 3:1;
-
-### Tools
-
-- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) (Windows, Mac)
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) (Web)
-- [Contrast Finder](https://app.contrast-finder.org/) (Web)
 
 
 ## Images
