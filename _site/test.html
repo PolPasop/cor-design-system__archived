@@ -1,8 +1,45 @@
----
-layout: layouts/base.njk
-templateClass: tmpl-home
----
-aa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+</head>
+<body>
+
+		<header>
+			<em>
+				<a href="/"></a>
+			</em>
+			<nav>
+  <h1>CoR Web Style guide</h1>
+  
+  <ul>
+    <li>
+      <a href="/cor-home.html">Home</a>
+    </li>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/accessibility.html">Accessibility</a>
+    </li>
+    <li>
+      <a href="/colour.html">Colour</a>
+    </li>
+    <li>
+      <a href="/images.html">Images</a>
+    </li>
+  </ul>
+</nav>
+		</header>
+
+		<main>
+			aa
 <video
     id="my-video"
     class="video-js"
@@ -13,8 +50,8 @@ aa
     poster="MY_VIDEO_POSTER.jpg"
     data-setup="{}"
   >
-    <!-- <source src="{{ '/assets/videos/142nd-plenary-session-of-the-committee-of-the-regions-05022021.mp4' | url }}" type="video/mp4" /> -->
-    <source src="{{ '/assets/videos/index.m3u8' | url }}" type="application/x-mpegURL" />
+    <!-- <source src="/assets/videos/142nd-plenary-session-of-the-committee-of-the-regions-05022021.mp4" type="video/mp4" /> -->
+    <source src="/assets/videos/index.m3u8" type="application/x-mpegURL" />
     <source src="MY_VIDEO.webm" type="video/webm" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
@@ -104,3 +141,9 @@ audioTrackList.addEventListener('change', function() {
 
 */
 </script>
+
+		</main>
+
+	  
+	</body>
+</html>
