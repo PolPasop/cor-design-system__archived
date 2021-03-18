@@ -6,4 +6,5 @@ permalink: /cor-jobs.html
 eleventyNavigation:
   key: Jobs
   order: 0
+abstract:
 ---
