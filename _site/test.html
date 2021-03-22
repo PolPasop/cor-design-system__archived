@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+	<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 	<link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
 				<a href="/"></a>
 			</em>
 			<nav>
-  <h1>CoR Design System</h1>
+  <h1>CoR Web Style guide</h1>
   
   <ul>
     <li>
@@ -45,8 +46,9 @@
     poster="MY_VIDEO_POSTER.jpg"
     data-setup="{}"
   >
-    <source src="/assets/videos/142nd-plenary-session-of-the-committee-of-the-regions-05022021.mp4" type="video/mp4" />
-    <source src="MY_VIDEO.webm" type="video/webm" />
+    <!-- <source src="/assets/videos/2021-03-01 15-41-01.m3u8" type="application/x-mpegURL" > -->
+    <source src="https://d2zihajmogu5jn.cloudfront.net/elephantsdream/hls/ed_hd.m3u8"  type="application/x-mpegURL" >
+
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -56,26 +58,29 @@
     </p>
   </video>
 
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+
   <script>
   // Create a player.
   var player = videojs('my-video');
 
-  // Create a track object.
-  var track = new videojs.AudioTrack({
-    id: 'my-spanish-audio-track',
-    kind: 'translation',
-    label: 'Spanish',
-    language: 'es'
-  });
+console.log("ini");
+// Create a track object.
+var track = new videojs.AudioTrack({
+  id: 'my-spanish-audio-track',
+  kind: 'translation',
+  label: 'French',
+  language: 'fr'
+});
 
-  // Add the track to the player's audio track list.
-  player.audioTracks().addTrack(track);
+// Add the track to the player's audio track list.
+player.audioTracks().addTrack(track);
 
 
   </script>
     
 
-  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+  
 		</main>
 
 	</body>
