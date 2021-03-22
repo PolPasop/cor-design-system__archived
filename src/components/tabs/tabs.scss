@@ -1,0 +1,9 @@
+.cor-snap-tabs {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+
+  /* Establish primary containing box */
+  overflow: hidden;
+  position: relative;
+}

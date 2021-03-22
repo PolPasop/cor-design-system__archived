@@ -19,5 +19,5 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover", name: "cover", widget: "image", required: false }
-          - { label: "Abstract", name: "abstract", widget: "markdown" }
+          - { label: "Abstract", name: "abstract", widget: "Text" }
           - { label: "Body", name: "body", widget: "markdown" }
