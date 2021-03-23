@@ -1,4 +1,9 @@
-*, :after, :before {
+@import "../../../css/_settings.css";
+@import "../../../components/tabs/tabs.css";
+
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 

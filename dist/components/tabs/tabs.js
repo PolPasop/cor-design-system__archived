@@ -1,4 +1,4 @@
-import "https://argyleink.github.io/scroll-timeline/dist/scroll-timeline.js";
+// import "https://argyleink.github.io/scroll-timeline/dist/scroll-timeline.js";
 
 const { matches: motionOK } = window.matchMedia(
   "(prefers-reduced-motion: no-preference)"
