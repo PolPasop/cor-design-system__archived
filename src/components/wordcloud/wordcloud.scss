@@ -1,0 +1,21 @@
+.cor-word-cloud {
+  --size: calc(var(--number) * 1rem);
+  
+}
+
+.cor-word-cloud ul {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.cor-word-cloud ul li {
+  color: red;
+  list-style: none;
+  font-size: var(--size);
+  padding: 0.125rem 0.25rem;
+}

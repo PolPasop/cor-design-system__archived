@@ -11,13 +11,39 @@
     "through2": "^4.0.2"
   },
   "scripts": {
-    "build": "gulp build && echo \"🏋 Build completed\" && exit 0",
-    "dev": "gulp dev",
-    "start": "npm run dev",
+    "dev:js": "rollup -c -w",
+    "dev:css": "postcss src/scss/styles.scss -o dist/css/bundle.css -w",
+    "dev:server": "eleventy --serve",
+    "start": "concurrently --kill-others npm:dev:*",
+    "build:pre:js": "rollup -c --environment NODE_ENV:production",
+    "build:pre:css": "postcss src/scss/styles.scss -o dist/css/bundle.css --env production",
+    "build": "rimraf dist && concurrently npm:build:pre:*",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build"
   },
   "devDependencies": {
-    "@11ty/eleventy-navigation": "^0.1.6"
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "concurrently": "^6.0.0",
+    "eleventy-plugin-faker": "github:pdehaan/eleventy-plugin-faker",
+    "gulp-sass": "^4.1.0",
+    "import-http": "^0.3.1",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "postcss-easings": "^3.0.1",
+    "postcss-import": "^14.0.0",
+    "postcss-import-url": "^7.0.0",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^2.7.1",
+    "rollup": "^2.42.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }

@@ -4,26 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
+    <title></title>
+    <meta name="description" content="">
 
     <link rel="stylesheet" href="https://cor.europa.eu/_layouts/15/1033/styles/Themable/corev15.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | url }}">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/Main2.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/Main.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/social.css">
 
-    <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
-    <link rel="stylesheet" href="{{ '/dist/css/bundle.css' | url }}">
+    <link rel="stylesheet" href="/dist/css/bundle.css">
 
-    <script src="{{ '/dist/js/bundle.js' | url }}" type="module"></script>
+    <script src="/dist/js/bundle.js" type="module"></script>
 
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
-        title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json"
-        title="{{ metadata.title }}">
+    <link rel="alternate" href="." type="application/atom+xml"
+        title="">
+    <link rel="alternate" href="." type="application/json"
+        title="">
 </head>
 
 <body>
@@ -1161,7 +1161,74 @@
 
                         </div>
                         <div class="mainContent">
-                            {{ content | safe }}
+                            
+<h1>Jobs</h1>
+
+
+<snap-tabs>
+        <header class="scroll-snap-x"> 
+          <nav>
+            <a active href="#responsive">Responsive</a>
+            <a href="#accessible">Accessible</a>
+            <a href="#overscroll">Horizontal Overscroll Ready</a>
+            <a href="#more">
+              <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                </svg>
+            </a>
+          </nav>
+          <span class="snap-indicator"></span>
+        </header>
+        <section class="scroll-snap-x">
+          <article id="responsive">
+            <h2>Sit dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <h2>Lore sf</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+          </article>
+          <article id="accessible">
+            <h2>Tenetur</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit. Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <h2>Tenet urs</h2>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <h2>Lore s sdf</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+          </article>
+          <article id="overscroll">
+            <h2>Lorems dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p><ul>
+              <li>Lorem</li>
+              <li>ipsum</li>
+              <li>dolor</li>
+            </ul>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+          </article>
+          <article id="more">
+            <h2>Lore s sdf</h2>
+            <ul>
+              <li>Lorem</li>
+              <li>ipsum</li>
+              <li>dolor</li>
+              <li>Lorem</li>
+              <li>ipsum</li>
+              <li>dolor</li>
+            </ul>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+          </article>
+        </section>
+      </snap-tabs> 
                         </div>
                     </div>
                     <div id="DeltaFormDigest">

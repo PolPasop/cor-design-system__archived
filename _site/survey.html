@@ -4,26 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
+    <title></title>
+    <meta name="description" content="">
 
     <link rel="stylesheet" href="https://cor.europa.eu/_layouts/15/1033/styles/Themable/corev15.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | url }}">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/Main2.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/Main.css">
     <link rel="stylesheet" href="https://cor.europa.eu/Style%20Library/Cor/style/css/social.css">
 
-    <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
-    <link rel="stylesheet" href="{{ '/dist/css/bundle.css' | url }}">
+    <link rel="stylesheet" href="/dist/css/bundle.css">
 
-    <script src="{{ '/dist/js/bundle.js' | url }}" type="module"></script>
+    <script src="/dist/js/bundle.js" type="module"></script>
 
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
-        title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json"
-        title="{{ metadata.title }}">
+    <link rel="alternate" href="." type="application/atom+xml"
+        title="">
+    <link rel="alternate" href="." type="application/json"
+        title="">
 </head>
 
 <body>
@@ -1161,7 +1161,15 @@
 
                         </div>
                         <div class="mainContent">
-                            {{ content | safe }}
+                            
+<h1>Survey</h1>
+
+
+<cor-word-cloud class="cor-word-cloud">
+</cor-word-cloud>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<script src="/dist/js/survey.js" type="module"></script>
                         </div>
                     </div>
                     <div id="DeltaFormDigest">

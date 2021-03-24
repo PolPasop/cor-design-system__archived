@@ -1,0 +1,13 @@
+---
+layout: layouts/cor-base.njk
+templateClass: tmpl-home
+css: 
+---
+
+{{ content | safe }}
+
+<cor-word-cloud class="cor-word-cloud">
+</cor-word-cloud>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<script src="{{ '/dist/js/survey.js' | url }}" type="module"></script>
