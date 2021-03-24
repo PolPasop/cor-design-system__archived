@@ -11,6 +11,27 @@ eleventyNavigation:
 
 ## Images
 
+## Formats
+
+- square banner 1x1: 
+  - 1500x1500 
+  - 750x750
+- In the spotlight banners 3x2 
+  - 920x
+- Image 3x2:
+  - 1500x1000
+  - 750x500
+
+Responsive images
+serve different images to different display densities. 
+multiple image versions are necessary if you want users to experience the crispest possible images, regardless of the pixel density of their device.
+
+Steps:
+- convert to next-gen formats (webp) https://web.dev/uses-webp-images/
+
+JPEG 2000, JPEG XR, and WebP are image formats that have superior compression and quality characteristics compared to their older JPEG and PNG counterparts. Encoding your images in these formats rather than JPEG or PNG means that they will load faster and consume less cellular data.
+
+
 ## Why is it important?
 
 Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that are used by people with visual impairments, includind people with low vision, to orient themselves in the content.
