@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<link rel="stylesheet" href="/assets/css/global.css">
+	  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+</head>
+<body>
+
+		<header>
+			<em>
+				<a href="/"></a>
+			</em>
+			<nav>
+  <h1>CoR Web Style guide</h1>
+  
+  <ul>
+    <li>
+      <a href="/cor-home.html">Home</a>
+    </li>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/cor-jobs.html">Jobs</a>
+    </li>
+    <li>
+      <a href="/accessibility.html">Accessibility</a>
+    </li>
+    <li>
+      <a href="/colour.html">Colour</a>
+    </li>
+    <li>
+      <a href="/images.html">Images</a>
+    </li>
+  </ul>
+</nav>
+		</header>
+
+		<main>
+			aa
+<video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <!-- <source src="/assets/videos/142nd-plenary-session-of-the-committee-of-the-regions-05022021.mp4" type="video/mp4" /> -->
+    <source src="/assets/videos/index.m3u8" type="application/x-mpegURL" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script>console.log("iojwdw")</script>
+
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+ 
+<script>
+var options = {};
+
+var player = videojs('my-video', options, function onPlayerReady() {
+  videojs.log('Your player is ready!');
+
+  // In this context, `this` is the player that was created by Video.js.
+  this.play();
+
+  var track = new videojs.AudioTrack({
+  id: 'my-spanish-audio-track',
+  kind: 'translation',
+  label: 'French',
+  language: 'fre',
+  enabled: true
+});
+
+  this.audioTracks().addTrack(track);
+
+
+  debugger;
+
+
+
+  // How about an event listener?
+  this.on('ended', function() {
+    videojs.log('Awww...over so soon?!');
+  });
+});
+/*
+
+console.log("111");
+// Create a player.
+var player = videojs('my-video');
+
+console.log("qqqq",player);
+
+
+
+
+
+// Create a track object.
+var track = new videojs.AudioTrack({
+  id: 'my-spanish-audio-track',
+  kind: 'translation',
+  label: 'French',
+  language: 'fre',
+  enabled: "true"
+});
+
+// Add the track to the player's audio track list.
+player.audioTracks().addTrack(track);
+
+// Get the current player's AudioTrackList object.
+var audioTrackList = player.audioTracks();
+
+audioTrackList[0].enabled = true;
+
+console.log("audioTrackList[0].enabled")
+// Listen to the "change" event.
+audioTrackList.addEventListener('change', function() {
+
+  // Log the currently enabled AudioTrack label.
+  for (var i = 0; i < audioTrackList.length; i++) {
+    var track = audioTrackList[i];
+    
+    if (track.enabled) {
+      videojs.log(track.label);
+      return;
+    }
+  }
+});
+
+*/
+</script>
+
+		</main>
+
+	  
+	</body>
+</html>

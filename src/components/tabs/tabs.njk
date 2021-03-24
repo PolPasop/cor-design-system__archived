@@ -1,1 +1,16 @@
-<p>{{ text }}</p>caca
+{% if tabs.items %}
+<cor-snap-tabs>
+  <header>
+    <nav>
+      {% for item in tabs.items %}
+      <a href="#{{ item.id }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+  <section>
+    {% for item in tabs.items %}
+    <article id="{{ item.id }}">{{ item.content }}</article>
+    {% endfor %}
+  </sectiom>
+</cor-snap-tabs>
+{% endif %}
