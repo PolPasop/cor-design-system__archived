@@ -12,6 +12,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/admin");
   // eleventyConfig.addPassthroughCopy("assets/videos");
 
+  eleventyConfig.addFilter("debugger", (...args) => {
+    console.log(...args);
+    debugger;
+  })
+
   return {
     templateFormats: [
       "njk",
