@@ -8,7 +8,35 @@ css:
 
 <cor-word-cloud class="cor-word-cloud"></cor-word-cloud>
 
-<cor-bar-graph class="cor-bar-graph"></cor-bar-graph>
+<cor-bar-graph class="cor-bar-graph">
+  
+  {% for item in survey %}
+  
+    <dt>{{item.question}}</dt>
+      
+      {% for response in item.responses %}
+      
+        <dd data-value="{{response.value}}" style="--value:{{response.value}};">
+          {{response.text}} 
+
+          {% if response.choices %}
+            <cor-bar-graph-choices class="cor-bar-graph">
+              <ul class="cor-bar-graph__bar--multichoice p-0">
+                {% for response in item.responses %}
+                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--{{ loop.index }} text-center" data-choice-value="{{response.value}}" style="--choice-value:{{response.value}};">{{response.value}}%</li>
+                {% endfor %}
+              </ul>
+            </cor-bar-graph-choices>
+          {% else %}
+            <span>{{response.value}}%</span>
+          {% endif %}
+        </dd>
+      
+      {% endfor %}
+    
+    {% endfor %}
+  
+</cor-bar-graph>
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
