@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="{{ '/dist/css/bundle.css' | url }}">
 
-    <script src="{{ '/dist/js/bundle.js' | url }}" type="module"></script>
+    <script src="{{ '/dist/js/index.js' | url }}" type="module"></script>
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
         title="{{ metadata.title }}">
@@ -724,23 +724,7 @@
                     </div>
                 </div>
 
-                <script type="text/javascript">
-                    g_QuickLaunchControlIds.push('cor_TopNavigationMenu');
-                    _spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable');
-                    _spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable');
-                    function cor_TopNavigationMenu_Callback(data, errorHandlerName) {
-                        WebForm_DoCallback('ctl00$PlaceHolderTopNavBar$TopNavigationMenu', data, AspMenuHandleDataRefresh, g_QuickLaunchMenu.Id, errorHandlerName, true);
-                    }
-                    var g_cor_TopNavigationMenu = null;
-                    function init_cor_TopNavigationMenu() {
-                        if (g_cor_TopNavigationMenu == null)
-                            g_cor_TopNavigationMenu = $create(SP.UI.AspMenu, null, null, null, $get('cor_TopNavigationMenu'));
-                    }
-                    if (g_spPreFetchKeys) {
-                        g_spPreFetchKeys.push('SP.Core.js');
-                    }
-                    EnsureScriptFunc('SP.Core.js', 'SP.UI.AspMenu', init_cor_TopNavigationMenu);
-                </script>
+                
 
                 <div id="clickableMenu" class="d-block d-lg-none noindex sticky-top">
                     <nav id="v2" class="navbar navbar-expand-lg navbar-light">

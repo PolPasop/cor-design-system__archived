@@ -1,12 +1,12 @@
-snap-tabs {
+cor-snap-tabs {
   --hue: 328deg;
   --accent: var(--hue) 100% 54%;
   --indicator-size: 2px;
 
-  --space-1: .5rem;
+  --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
-  
+
   display: flex;
   flex-direction: column;
 
@@ -27,7 +27,7 @@ snap-tabs {
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
-  
+
   @media (hover: none) {
     scrollbar-width: none;
 
@@ -38,7 +38,7 @@ snap-tabs {
   }
 }
 
-snap-tabs > header {
+cor-snap-tabs > header {
   --text-color: hsl(var(--hue) 5% 40%);
   --text-active-color: hsl(var(--hue) 20% 10%);
 
@@ -59,7 +59,7 @@ snap-tabs > header {
     align-items: center;
     white-space: nowrap;
 
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--text-color);
     font-weight: bold;
     text-decoration: none;
@@ -75,7 +75,7 @@ snap-tabs > header {
     }
 
     &:focus {
-      outline-offset: -.5ch;
+      outline-offset: -0.5ch;
     }
   }
 
@@ -87,7 +87,7 @@ snap-tabs > header {
   }
 }
 
-snap-tabs > section {
+cor-snap-tabs > section {
   block-size: 100%;
 
   display: grid;
@@ -110,14 +110,12 @@ snap-tabs > section {
     - hide the animated .indicator 
   */
 
-  snap-tabs {
+  cor-snap-tabs {
     & > header a {
       border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
-      transition:
-        color .7s ease,
-        border-color .5s ease;
+      transition: color 0.7s ease, border-color 0.5s ease;
 
-      &:matches(:target,:active,[active]) {
+      &:matches(:target, :active, [active]) {
         color: var(--text-active-color);
         border-block-end-color: hsl(var(--accent));
       }
@@ -129,7 +127,7 @@ snap-tabs > section {
   }
 }
 
-.cor-snap-tabs {
+.cor-cor-snap-tabs {
   border: solid 1px red;
   display: flex;
   flex-direction: column;

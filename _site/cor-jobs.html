@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="/dist/css/bundle.css">
 
-    <script src="/dist/js/bundle.js" type="module"></script>
+    <script src="/dist/js/index.js" type="module"></script>
 
     <link rel="alternate" href="." type="application/atom+xml"
         title="">
@@ -724,23 +724,7 @@
                     </div>
                 </div>
 
-                <script type="text/javascript">
-                    g_QuickLaunchControlIds.push('cor_TopNavigationMenu');
-                    _spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable');
-                    _spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable');
-                    function cor_TopNavigationMenu_Callback(data, errorHandlerName) {
-                        WebForm_DoCallback('ctl00$PlaceHolderTopNavBar$TopNavigationMenu', data, AspMenuHandleDataRefresh, g_QuickLaunchMenu.Id, errorHandlerName, true);
-                    }
-                    var g_cor_TopNavigationMenu = null;
-                    function init_cor_TopNavigationMenu() {
-                        if (g_cor_TopNavigationMenu == null)
-                            g_cor_TopNavigationMenu = $create(SP.UI.AspMenu, null, null, null, $get('cor_TopNavigationMenu'));
-                    }
-                    if (g_spPreFetchKeys) {
-                        g_spPreFetchKeys.push('SP.Core.js');
-                    }
-                    EnsureScriptFunc('SP.Core.js', 'SP.UI.AspMenu', init_cor_TopNavigationMenu);
-                </script>
+                
 
                 <div id="clickableMenu" class="d-block d-lg-none noindex sticky-top">
                     <nav id="v2" class="navbar navbar-expand-lg navbar-light">
@@ -1162,7 +1146,17 @@
                         </div>
                         <div class="mainContent">
                             
-<div class="cor-jobs bg-white">
+<div>
+  
+  <div>
+  
+  </div>
+
+
+  <nav>
+    <a>link</a>
+  </nav>
+  <div class="cor-jobs bg-white">
 
   <h1>Work with us</h1>
 
@@ -1185,15 +1179,23 @@
   <header>
     <nav>
       
-      <a href="#myid">mytitle</a>
+      <a active href="#myid">mytitle</a>
       
-      <a href="#myid2">mytitle2</a>
+      <a  href="#myid2">mytitle2</a>
       
-      <a href="#myid3">mytitle3</a>
+      <a  href="#myid3">mytitle3</a>
+      
+      
+      <a href="#more">
+        <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+          <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+          </svg>
+      </a>
       
     </nav>
+    <span class="snap-indicator"></span>
   </header>
-  <section>
+  <section class="scroll-snap-x">
     
     <article id="myid">Introduction of the pageEsse in excepteur consectetur elit aliquip ipsum nostrud elit cupidatat qui aute ea pariatur. Consectetur ea dolore consequat non consectetur irure consequat dolore. Adipisicing in labore sunt proident ut excepteur et laboris enim nulla ut velit cillum ex. Esse nostrud duis amet Lorem occaecat ut irure minim cillum aliquip officia veniam cupidatat. Tempor veniam fugiat non in non aliquip magna ipsum.</article>
     
@@ -1201,11 +1203,16 @@
     
     <article id="myid3">Introduction of the pageEsse in excepteur consectetur elit aliquip ipsum nostrud elit cupidatat qui aute ea pariatur. Consectetur ea dolore consequat non consectetur irure consequat dolore. Adipisicing in labore sunt proident ut excepteur et laboris enim nulla ut velit cillum ex. Esse nostrud duis amet Lorem occaecat ut irure minim cillum aliquip officia veniam cupidatat. Tempor veniam fugiat non in non aliquip magna ipsum.</article>
     
+    
+    <article id="more">more content</article>
+    
   </sectiom>
 </cor-snap-tabs>
 
 
 </div>
+</div>
+
                         </div>
                     </div>
                     <div id="DeltaFormDigest">

@@ -1,0 +1,12 @@
+.grid {
+  --gap-sm: var(--s-2);
+  --gap-md: var(--s0);
+  --gap-lg: var(--s2);
+  --max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: var(--gap-sm);
+  margin: 0 auto;
+  max-width: var(--max-width);
+}

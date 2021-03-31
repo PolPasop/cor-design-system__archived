@@ -1,28 +1,92 @@
 :root {
-  color: green;
-}
+  --heading-size-1: 32px;
+  --heading-size: 24px;
+  --heading-size-secondary: 19px;
+  --text-size: 19px;
+  --text-color: #474746;
+  --text-color-light: hsl(var(--text-color), 100%, 44%);
+  --c-eu: hsla(211.2, 100%, 29.4%, 1);
+  --c-eu-5: hsla(211.2, 100%, 29.4%, 0.5);
+  --c-secondary: #fcd838;
 
-snap-tabs {
+  --ratio: 1.5;
+  --s0: 1rem;
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  /* UI Colors */
+  --primary-hue: 12;
+  --color--primary: hsl(var(--primary-hue), 100%, 44%);
+  --color--primary--hover: hsl(var(--primary-hue), 100%, 39%);
+  --color--primary--active: hsl(var(--primary-hue), 100%, 30%);
+
+  /* Grays */
+  --c-g-1: hsl(0, 0%, 10%);
+  --c-g-2: hsl(0, 0%, 20%);
+  --c-g-3: hsl(0, 0%, 30%);
+  --c-g-4: hsl(0, 0%, 40%);
+  --c-g-5: hsl(0, 0%, 50%);
+  --c-g-6: hsl(0, 0%, 60%);
+  --c-g-7: hsl(0, 0%, 70%);
+  --c-g-8: hsl(0, 0%, 80%);
+  --c-g-9: hsl(0, 0%, 90%);
+
+  /* */
+  --border-color: #ebebeb;
+
+  /* Box Shadows */
+  --shadow: 0px 4px 4px 0px rgba(37, 37, 37, 0.25);
+  --shadow-01: 0px 2px 4px rgba(37, 37, 37, 0.1);
+  --shadow-02: 0px 4px 8px rgba(37, 37, 37, 0.1);
+  --shadow-03: 0px 8px 16px rgba(37, 37, 37, 0.1);
+  --shadow-04: 0px 16px 24px rgba(37, 37, 37, 0.1);
+  --shadow-05: 0px 24px 32px rgba(37, 37, 37, 0.1);
+
+  /* Grid */
+  --gap-sm: var(--s-2);
+  --gap-md: var(--s0);
+  --gap-lg: var(--s2);
+}
+.grid {
+  --gap-sm: var(--s-2);
+  --gap-md: var(--s0);
+  --gap-lg: var(--s2);
+  --max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: calc(calc(1rem / 1.5) / 1.5);
+  grid-gap: var(--gap-sm);
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+cor-snap-tabs {
   --hue: 328deg;
   --accent: var(--hue) 100% 54%;
   --indicator-size: 2px;
 
-  --space-1: .5rem;
+  --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
-  
+
   display: flex;
   flex-direction: column;
 
   overflow: hidden;
   position: relative
 }
-
-snap-tabs header, snap-tabs nav, snap-tabs section, snap-tabs article, snap-tabs a {
+cor-snap-tabs header, cor-snap-tabs nav, cor-snap-tabs section, cor-snap-tabs article, cor-snap-tabs a {
     outline-color: hsl(var(--accent));
     outline-offset: -5px;
   }
-
 .scroll-snap-x {
   overflow-x: auto;
   overflow-y: hidden;
@@ -31,16 +95,12 @@ snap-tabs header, snap-tabs nav, snap-tabs section, snap-tabs article, snap-tabs
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory
 }
-
 @media (prefers-reduced-motion: no-preference) {
-
 .scroll-snap-x {
     scroll-behavior: smooth
 }
   }
-
 @media (hover: none) {
-
 .scroll-snap-x {
     scrollbar-width: none
 }
@@ -50,8 +110,7 @@ snap-tabs header, snap-tabs nav, snap-tabs section, snap-tabs article, snap-tabs
       height: 0;
     }
   }
-
-snap-tabs > header {
+cor-snap-tabs > header {
   --text-color: hsl(var(--hue) 5% 40%);
   --text-active-color: hsl(var(--hue) 20% 10%);
 
@@ -63,86 +122,75 @@ snap-tabs > header {
   display: flex;
   flex-direction: column
 }
-
-snap-tabs > header > nav {
+cor-snap-tabs > header > nav {
     display: flex;
   }
-
-snap-tabs > header a {
+cor-snap-tabs > header a {
     scroll-snap-align: start;
 
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
 
-    font-size: .8rem;
+    font-size: 0.8rem;
+    color: #474746;
     color: var(--text-color);
     font-weight: bold;
     text-decoration: none;
     padding: var(--space-2) var(--space-3)
   }
-
-snap-tabs > header a > svg {
+cor-snap-tabs > header a > svg {
       inline-size: 1.5em;
       pointer-events: none;
     }
-
-snap-tabs > header a:hover {
+cor-snap-tabs > header a:hover {
       background: hsl(var(--accent) / 5%);
     }
-
-snap-tabs > header a:focus {
-      outline-offset: -.5ch;
+cor-snap-tabs > header a:focus {
+      outline-offset: -0.5ch;
     }
-
-snap-tabs > header > .snap-indicator {
+cor-snap-tabs > header > .snap-indicator {
     inline-size: 0;
     block-size: var(--indicator-size);
     border-radius: var(--indicator-size);
     background: hsl(var(--accent));
   }
-
-snap-tabs > section {
+cor-snap-tabs > section {
   block-size: 100%;
 
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%
 }
-
-snap-tabs > section > article {
+cor-snap-tabs > section > article {
     scroll-snap-align: start;
     overflow-y: auto;
     overscroll-behavior-y: contain;
 
     padding: var(--space-2) var(--space-3);
   }
-
 @media (prefers-reduced-motion: reduce) {
   /* 
     - swap to border-bottom styles
     - transition colors
     - hide the animated .indicator 
   */
-    snap-tabs > header a {
+    cor-snap-tabs > header a {
       -webkit-border-after: var(--indicator-size) solid hsl(var(--accent) / 0%);
               border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
-      transition:
-        color .7s ease,
-        border-color .5s ease
+      transition: color 0.7s ease, border-color 0.5s ease
     }
 
-      snap-tabs > header a:target, snap-tabs > header a:active, snap-tabs > header a[active] {
+      cor-snap-tabs > header a:target, cor-snap-tabs > header a:active, cor-snap-tabs > header a[active] {
         color: var(--text-active-color);
         border-block-end-color: hsl(var(--accent));
       }
 
-    snap-tabs .snap-indicator {
+    cor-snap-tabs .snap-indicator {
       visibility: hidden;
     }
 }
-
-.cor-snap-tabs {
+.cor-cor-snap-tabs {
   border: solid 1px red;
   display: flex;
   flex-direction: column;
@@ -151,12 +199,10 @@ snap-tabs > section > article {
   overflow: hidden;
   position: relative;
 }
-
 .cor-word-cloud {
   --size: calc(var(--number) * 1rem);
   
 }
-
 .cor-word-cloud ul {
   align-items: center;
   display: flex;
@@ -166,14 +212,12 @@ snap-tabs > section > article {
   list-style: none;
   padding: 0;
 }
-
 .cor-word-cloud ul li {
   color: red;
   list-style: none;
   font-size: var(--size);
   padding: 0.125rem 0.25rem;
 }
-
 cor-bar-graph span {
   align-items: center;
   background: white;
@@ -185,7 +229,6 @@ cor-bar-graph span {
   position: relative;
   z-index: 0;
 }
-
 @-webkit-keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -194,7 +237,6 @@ cor-bar-graph span {
     transform: translateX(0);
   }
 }
-
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -203,7 +245,6 @@ cor-bar-graph span {
     transform: translateX(0);
   }
 }
-
 cor-bar-graph span:after {
   background: green;
   content: "";
@@ -214,14 +255,12 @@ cor-bar-graph span:after {
   width: calc(var(--value) * 1%);
   z-index: -1;
 }
-
 .cor-bar-graph__bar--multichoice {
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
  list-style: none;
 }
-
 .cor-bar-graph__bar--multichoice {
   --shade-1: hsl(180, 100%, 10%);
   --shade-2: hsl(180, 100%, 15%);
@@ -230,58 +269,43 @@ cor-bar-graph span:after {
   --shade-5: hsl(180, 100%, 30%);
   --shade-6: hsl(180, 100%, 35%);
 }
-
 .cor-bar-graph__bar--multichoice__bg--1 {
   background: var(--shade-1);
 }
-
 .cor-bar-graph__bar--multichoice__bg--2 {
   background: var(--shade-2);
 }
-
 .cor-bar-graph__bar--multichoice__bg--3 {
   background: var(--shade-3);
 }
-
 .cor-bar-graph__bar--multichoice__bg--1 {
   background: var(--shade-1);
 }
-
 .cor-bar-graph__bar--multichoice__bg--4 {
   background: var(--shade-4);
 }
-
 .cor-bar-graph__bar--multichoice__bg--5 {
   background: var(--shade-5);
 }
-
 .cor-bar-graph__bar--multichoice__item {
   color: white;
   flex: 1;
   text-align: center;
   width: calc(var(--choice-value) * 1%);
 }
-
 /* Lists */
-
 .list-none {
   list-style: none !important;
 }
-
 /* Margins */
-
 .m-0 {
   margin: 0 !important;
 }
-
 /* Paddings */
-
 .p-0 {
   padding: 0 !important;
 }
-
 /* Text alignment */
-
 .text-center {
   text-align: center !important;
 }
