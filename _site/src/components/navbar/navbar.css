@@ -1,0 +1,14 @@
+.cor-nav a {
+  --padding: 23px;
+
+  display: flex;
+  padding: var(--padding, var(--s1));
+}
+
+.cor-nav--vertical {
+  flex-direction: column;
+}
+
+.cor-nav--horizontal {
+  flex-direction: row;
+}

@@ -1,0 +1,78 @@
+cor-bar-graph span {
+  align-items: center;
+  background: white;
+  border: solid 1px green;
+  color: white;
+  display: flex;
+  height: 50px;
+  padding-left: 2rem;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+cor-bar-graph span:after {
+  background: green;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: calc(var(--value) * 1%);
+  z-index: -1;
+}
+
+.cor-bar-graph__bar--multichoice {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ list-style: none;
+}
+
+.cor-bar-graph__bar--multichoice {
+  --shade-1: hsl(180, 100%, 10%);
+  --shade-2: hsl(180, 100%, 15%);
+  --shade-3: hsl(180, 100%, 20%);
+  --shade-4: hsl(180, 100%, 25%);
+  --shade-5: hsl(180, 100%, 30%);
+  --shade-6: hsl(180, 100%, 35%);
+}
+
+.cor-bar-graph__bar--multichoice__bg--1 {
+  background: var(--shade-1);
+}
+
+.cor-bar-graph__bar--multichoice__bg--2 {
+  background: var(--shade-2);
+}
+
+.cor-bar-graph__bar--multichoice__bg--3 {
+  background: var(--shade-3);
+}
+
+.cor-bar-graph__bar--multichoice__bg--1 {
+  background: var(--shade-1);
+}
+
+.cor-bar-graph__bar--multichoice__bg--4 {
+  background: var(--shade-4);
+}
+
+.cor-bar-graph__bar--multichoice__bg--5 {
+  background: var(--shade-5);
+}
+
+.cor-bar-graph__bar--multichoice__item {
+  color: white;
+  flex: 1;
+  text-align: center;
+  width: calc(var(--choice-value) * 1%);
+}

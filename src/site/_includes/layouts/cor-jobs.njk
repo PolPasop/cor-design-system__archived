@@ -1,17 +1,11 @@
 ---
 layout: layouts/cor-page.njk
 templateClass: tmpl-home
+pagecss: jobs.css
 ---
-<div class="cor-jobs bg-white">
 
-  <h1>{{ title }}</h1>
+{{ content | safe }}
 
-  
+{% include "../../../components/tabs/tabs.njk" %}
 
-  <p>{{ abstract }}</p>
 
-  {{ content | safe }}
-
-  {% include "../../../components/tabs/tabs.njk" %}
-
-</div>

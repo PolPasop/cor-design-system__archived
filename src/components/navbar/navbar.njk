@@ -1,0 +1,5 @@
+<nav class="cor-nav {% if direction %}cor-nav--{{ direction }} {% endif %}">
+  {% for navitem in nav %}
+  <a href="#">{{ navitem }}</a>
+  {% endfor %}
+</nav>

@@ -1,0 +1,27 @@
+{% if tabs.items %}
+<cor-snap-tabs>
+  <header>
+    <nav>
+      {% for item in tabs.items %}
+      <a {% if loop.first %}active{% endif %} href="#{{ item.id }}">{{ item.title }}</a>
+      {% endfor %}
+      {% if tabs.more %}
+      <a href="#more">
+        <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+          <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+          </svg>
+      </a>
+      {% endif %}
+    </nav>
+    <span class="snap-indicator"></span>
+  </header>
+  <section class="scroll-snap-x">
+    {% for item in tabs.items %}
+    <article id="{{ item.id }}">{{ item.content }}</article>
+    {% endfor %}
+    {% if tabs.more %}
+    <article id="more">{{ tabs.more }}</article>
+    {% endif %}
+  </sectiom>
+</cor-snap-tabs>
+{% endif %}

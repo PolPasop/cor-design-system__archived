@@ -3,15 +3,29 @@ layout: layouts/cor-base.njk
 templateClass: tmpl-home
 ---
 
-<div>
+<div class="cor-page cor-page--{{ css.pageClassVariation }}">
   
-  <div>
-  
+  <div class="cor-page__head">
+    <div>
+      <h1>{{ title }}</h1>
+      <p>{{ abstract }}</p>
+    </div>
+    <div class="cor-page__cover">
+      <!-- <img src="{{ poster }}" srcset="{{ poster }}-small.jpg 480w, {{ poster }}-large.jpg 1080w" sizes="50vw"> -->
+      {% image "./src/assets/img/people@2x.png", "photo of my cat", " 50vw, 100vw" %}
+    </div>
   </div>
 
+  
+  {% navbar "Pim" %}
 
-  <nav>
-    <a>link</a>
-  </nav>
-  {{ content | safe }}
+  <div class="cor-page__content">
+    <nav>
+      <a>link</a>
+    </nav>
+    <main>
+      {{ content | safe }}
+    </main>
+  </div>
+
 </div>
