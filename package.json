@@ -2,7 +2,6 @@
   "name": "cor-design-system",
   "version": "0.1.0",
   "main": "gulpfile.js",
-  "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^0.8.2",
