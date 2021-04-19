@@ -11,7 +11,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - name: "jobs"
+      - name: "jobs page"
         label: "Jobs page"
         delete: false
         file: "src/site/pages/jobs.md"
