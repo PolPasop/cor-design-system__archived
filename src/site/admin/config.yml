@@ -24,7 +24,7 @@ collections:
           - label: "Process"
             name: "process"
             widget: "object"
-            fields: 
+            fields:
               - { label: "Permanent", name: "permanent", widget: "markdown" }
               - { label: "National experts", name: "nationalexp", widget: "markdown" }
               - { label: "Student", name: "student", widget: "markdown" }
