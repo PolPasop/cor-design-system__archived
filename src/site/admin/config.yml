@@ -11,7 +11,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - name: "jobs page"
+      - name: "jobs"
         label: "Jobs page"
         delete: false
         file: "src/site/pages/jobs.md"
@@ -28,16 +28,16 @@ collections:
               - { label: "Permanent", name: "permanent", widget: "markdown", required: false }
               - { label: "National experts", name: "nationalexp", widget: "markdown", required: false }
               - { label: "Student", name: "student", widget: "markdown", required: false }
-        - label: "Testimonials"
-          name: "testimonials"
-          widget: "list"
-          summary: '{{fields.quote}} - {{fields.author.name}}'
-          fields:
-            - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-            - label: Author
-              name: author
-              widget: object
-              fields:
-                - {label: Name, name: name, widget: string, default: "Emmet"}
-                - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: '{{fields.quote}} - {{fields.author.name}}'
+            fields:
+              - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+              - label: Author
+                name: author
+                widget: object
+                fields:
+                  - {label: Name, name: name, widget: string, default: "Emmet"}
+                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
 
