@@ -6,14 +6,14 @@ async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
     widths: [600, 950],
     outputDir: "./_site/img/",
-    formats: ["avif", "jpeg"],
+    formats: ["avif", "jpeg"]
   });
 
   let imageAttributes = {
     alt,
     sizes,
     loading: "lazy",
-    decoding: "async",
+    decoding: "async"
   };
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
@@ -25,12 +25,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   eleventyConfig.addPassthroughCopy("dist");
-  eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/components");
-  eleventyConfig.addPassthroughCopy("assets/css");
-  eleventyConfig.addPassthroughCopy("assets/scss");
-  eleventyConfig.addPassthroughCopy("assets/fonts");
+  eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/site/admin");
   // eleventyConfig.addPassthroughCopy("assets/videos");
 
@@ -39,23 +36,25 @@ module.exports = function (eleventyConfig) {
     debugger;
   });
 
-  /*
-  eleventyConfig.addShortcode("navbar", function(data, direction) {
+
+  eleventyConfig.addShortcode("navbar", function (data, direction) {
     return `
-    <nav class="cor-nav ${ direction ? `cor-nav--${ direction} ` : ``}">
+    <nav class="cor-nav ${direction ? `cor-nav--${direction} ` : ``}">
       {% for navitem in nav %}
       <a href="#">{{ navitem }}</a>
       {% endfor %}
     </nav>
     `;
   });
-  */
 
+
+  /*
   const navbarTemplate = require("./src/components/navbar/template.js");
   eleventyConfig.addShortcode("navbar", function (direction) {
     console.log(navbarTemplate);
     return navbarTemplate(direction);
   });
+  */
 
   return {
     templateFormats: [
