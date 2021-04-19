@@ -19,13 +19,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover", name: "cover", widget: "image", required: false }
-          - { label: "Abstract", name: "abstract", widget: "Text" }
+          - { label: "Abstract", name: "abstract", widget: "markdown" }
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Process"
             name: "process"
             widget: "object"
             fields:
-              - { label: "Permanent", name: "permanent", widget: "markdown" }
-              - { label: "National experts", name: "nationalexp", widget: "markdown" }
-              - { label: "Student", name: "student", widget: "markdown" }
+              - { label: "Permanent", name: "permanent", widget: "markdown", required: false }
+              - { label: "National experts", name: "nationalexp", widget: "markdown", required: false }
+              - { label: "Student", name: "student", widget: "markdown", required: false }
 
