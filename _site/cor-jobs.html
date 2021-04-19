@@ -1157,12 +1157,18 @@
     </div>
     <div class="cor-page__cover">
       <!-- <img src="poeple.png,people@2x.png" srcset="poeple.png,people@2x.png-small.jpg 480w, poeple.png,people@2x.png-large.jpg 1080w" sizes="50vw"> -->
-      <picture><source type="image/avif" srcset="/img/33e97b57-600.avif 600w, /img/33e97b57-950.avif 950w" sizes=" 50vw, 100vw"><source type="image/jpeg" srcset="/img/33e97b57-600.jpeg 600w, /img/33e97b57-950.jpeg 950w" sizes=" 50vw, 100vw"><img alt="photo of my cat" loading="lazy" decoding="async" src="/img/33e97b57-600.jpeg" width="950" height="896"></picture>
+      
     </div>
   </div>
 
   
-  undefined
+  
+    <nav class="cor-nav ">
+      {% for navitem in nav %}
+      <a href="#">{{ navitem }}</a>
+      {% endfor %}
+    </nav>
+    
 
   <div class="cor-page__content">
     <nav>

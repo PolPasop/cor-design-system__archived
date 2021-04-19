@@ -22,7 +22,7 @@ wordcloud:
     number: 50
   - name: 'stiff'
     number: 2
-  - name: 'capable'
+  - name: 'capables'
     number: 3
   - name: 'big'
     number: 100

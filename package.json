@@ -1,11 +1,10 @@
 {
-  "name": "cor-design-system",
+  "name": "@cor-web/cor-design-system",
   "version": "0.1.0",
   "main": "gulpfile.js",
-  "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.8.2",
+    "@11ty/eleventy-img": "^0.8.3",
     "@frctl/fractal": "^1.5.4",
     "@frctl/nunjucks": "^2.0.8",
     "concurrently": "^6.0.0",
@@ -48,5 +47,19 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolPasop/cor-design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolPasop/cor-design-system/issues"
+  },
+  "homepage": "https://github.com/PolPasop/cor-design-system#readme",
+  "description": ""
 }
