@@ -2,11 +2,11 @@
 abstract: No matter what experiences you bring with you, the challenges you
   have gone through or will go through, we want you to belong at CoR. You should
   never hide parts of yourself to fit in.
-cta:
-  - text: Explore Jobs
-    link:
-  - text: Begin process
-    link:
+callToActions:
+  - CTAText: Explore Jobs
+    CTALink:
+  - CTAText: Begin process
+    CTALink:
 nav:
   - page1
   - page2

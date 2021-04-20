@@ -20,6 +20,12 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover", name: "cover", widget: "image", required: false }
           - { label: "Abstract", name: "abstract", widget: "markdown" }
+          - label: "Call to actions"
+            name: "callToActions"
+            widget: "list"
+            fields:
+              - {label: Call to action text, name: CTAText, widget: string, default: "Everything is awesome!"}
+              - {label: Call to action link, name: CTALink, widget: string, default: ""}
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Process"
             name: "process"
