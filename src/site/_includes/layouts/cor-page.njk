@@ -20,12 +20,16 @@ templateClass: tmpl-home
             </div>
           </div>
           {% endif %}
-          
+
       </div>
     </div>
     <div>
-      <img src="https://placeimg.com/1000/1000/nature" alt=""/>
-      <!-- <img src="{{ poster }}" srcset="{{ poster }}-small.jpg 480w, {{ poster }}-large.jpg 1080w" sizes="50vw"> -->
+      {% if cover %}
+        <img src="{{ poster }}" srcset="{{ poster }}-small.jpg 480w, {{ poster }}-large.jpg 1080w" sizes="50vw">
+      {% else %}
+        <img src="https://placeimg.com/1000/1000/nature" alt=""/>
+      {% endif %}
+      
     </div>
   </div>
  
