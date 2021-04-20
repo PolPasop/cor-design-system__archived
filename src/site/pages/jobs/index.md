@@ -8,13 +8,12 @@ callToActions:
   - CTAText: Begin process
     CTALink:
 nav:
-  - page1
-  - page2
-  - page3
+  - text: Why work with us
+    link:
 css:
   pageClassVariation: jobs
 layout: layouts/cor-jobs.njk
-permalink: /cor-jobs.html
+permalink: /jobs/index.html
 poster:
   - poeple.png
   - people@2x.png

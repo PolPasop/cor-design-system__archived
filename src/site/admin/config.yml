@@ -9,42 +9,37 @@ backend:
 media_folder: "static/img" 
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "jobs"
-        label: "Jobs page"
-        delete: false
-        file: "src/site/pages/jobs.md"
-        slug: "{{slug}}"
+  - label: "Jobs"
+    name: "jobs"
+    folder: "src/site/pages/jobs"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Cover", name: "cover", widget: "image", required: false }
+      - { label: "Abstract", name: "abstract", widget: "markdown" }
+      - label: "Call to actions"
+        name: "callToActions"
+        widget: "list"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Cover", name: "cover", widget: "image", required: false }
-          - { label: "Abstract", name: "abstract", widget: "markdown" }
-          - label: "Call to actions"
-            name: "callToActions"
-            widget: "list"
+          - {label: Call to action text, name: CTAText, widget: string, default: "Everything is awesome!"}
+          - {label: Call to action link, name: CTALink, widget: string, default: ""}
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Process"
+        name: "process"
+        widget: "object"
+        fields:
+          - { label: "Permanent", name: "permanent", widget: "markdown", required: false }
+          - { label: "National experts", name: "nationalexp", widget: "markdown", required: false }
+          - { label: "Student", name: "student", widget: "markdown", required: false }
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+          - label: Author
+            name: author
+            widget: object
             fields:
-              - {label: Call to action text, name: CTAText, widget: string, default: "Everything is awesome!"}
-              - {label: Call to action link, name: CTALink, widget: string, default: ""}
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Process"
-            name: "process"
-            widget: "object"
-            fields:
-              - { label: "Permanent", name: "permanent", widget: "markdown", required: false }
-              - { label: "National experts", name: "nationalexp", widget: "markdown", required: false }
-              - { label: "Student", name: "student", widget: "markdown", required: false }
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "list"
-            summary: '{{fields.quote}} - {{fields.author.name}}'
-            fields:
-              - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-              - label: Author
-                name: author
-                widget: object
-                fields:
-                  - {label: Name, name: name, widget: string, default: "Emmet"}
-                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
-
+              - {label: Name, name: name, widget: string, default: "Emmet"}
+              - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}

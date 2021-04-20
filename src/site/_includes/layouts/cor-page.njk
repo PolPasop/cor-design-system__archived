@@ -33,8 +33,13 @@ templateClass: tmpl-home
     </div>
   </div>
  
-  
-  {% navbar "Pim" %}
+  {% if nav %}
+    <nav class="cor-nav {% if direction %}cor-nav--{{ direction }} {% endif %}">
+      {% for navitem in nav %}
+      <a href="{{ navitem.link }}">{{ navitem.text }}</a>
+      {% endfor %}
+    </nav>
+  {% endif %}
 
   <div class="cor-with-sidebar">
     <div> <!-- intermediary wrapper -->
