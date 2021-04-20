@@ -29,32 +29,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/components");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/site/admin");
+  eleventyConfig.addPassthroughCopy("static");
   // eleventyConfig.addPassthroughCopy("assets/videos");
 
   eleventyConfig.addFilter("debugger", (...args) => {
     console.log(...args);
     debugger;
   });
-
-
-  eleventyConfig.addShortcode("navbar", function (data, direction) {
-    return `
-    <nav class="cor-nav ${direction ? `cor-nav--${direction} ` : ``}">
-      {% for navitem in nav %}
-      <a href="#">{{ navitem }}</a>
-      {% endfor %}
-    </nav>
-    `;
-  });
-
-
-  /*
-  const navbarTemplate = require("./src/components/navbar/template.js");
-  eleventyConfig.addShortcode("navbar", function (direction) {
-    console.log(navbarTemplate);
-    return navbarTemplate(direction);
-  });
-  */
 
   return {
     templateFormats: [

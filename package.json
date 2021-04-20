@@ -20,7 +20,7 @@
     "start": "concurrently --kill-others npm:dev:*",
     "build:pre:js": "rollup -c --environment NODE_ENV:production",
     "build:pre:css": "postcss src/scss/styles.scss -o dist/css/bundle.css --env production",
-    "build": "rimraf dist && concurrently npm:build:pre:*",
+    "build": "rimraf dist && eleventy && concurrently npm:build:pre:*",
     "fractal:start": "fractal start --sync",
     "fractal:build": "fractal build"
   },
