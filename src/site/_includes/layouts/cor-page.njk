@@ -9,7 +9,16 @@ templateClass: tmpl-home
     <div class="cor-box">
       <div class="cor-stack">
           <h1 class="cor-h1">{{ title }}</h1>
-          <p  class="cor-h3">{{ abstract }}</p>
+          <p class="cor-h3">{{ abstract }}</p>
+          {% if cta %}
+          <div class="cor-cluster">
+            <div>
+               {% for ctaitem in cta %}
+              <a href="{{ ctaitem.link }}">{{ ctaitem.text }}</a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
       </div>
     </div>
     <div>
