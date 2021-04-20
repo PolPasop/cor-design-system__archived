@@ -4,28 +4,36 @@ templateClass: tmpl-home
 ---
 
 <div class="cor-page cor-page--{{ css.pageClassVariation }}">
-  
-  <div class="cor-page__head">
-    <div>
-      <h1>{{ title }}</h1>
-      <p>{{ abstract }}</p>
+
+  <div class="cor-grid">
+    <div class="cor-box">
+      <div class="cor-stack">
+          <h1 class="cor-h1">{{ title }}</h1>
+          <p  class="cor-h3">{{ abstract }}</p>
+      </div>
     </div>
-    <div class="cor-page__cover">
+    <div>
+      <img src="https://placeimg.com/1000/1000/nature" alt=""/>
       <!-- <img src="{{ poster }}" srcset="{{ poster }}-small.jpg 480w, {{ poster }}-large.jpg 1080w" sizes="50vw"> -->
-      
     </div>
   </div>
-
+ 
   
   {% navbar "Pim" %}
 
-  <div class="cor-page__content">
-    <nav>
-      <a>link</a>
-    </nav>
-    <main>
-      {{ content | safe }}
-    </main>
+  <div class="cor-with-sidebar">
+    <div> <!-- intermediary wrapper -->
+      <div>
+        <nav>
+          <a>link</a>
+        </nav>
+      </div>
+      <div>
+        <main>
+          {{ content | safe }}
+        </main>
+      </div>
+    </div>
   </div>
 
 </div>
