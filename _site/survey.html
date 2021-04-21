@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/src/css/jobs.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cor-web/cor-design-system/dist/all.css">
+    
 
     <script src="/dist/js/index.js" type="module"></script>
 
@@ -1155,7 +1156,7 @@
 
 <cor-word-cloud class="cor-word-cloud"></cor-word-cloud>
 
-<cor-bar-graph class="cor-bar-graph">
+<div>
   
   
   
@@ -1167,7 +1168,7 @@
           By showing greater acceptance of the diversities that exists among the different countries 
 
           
-            <span>11%</span>
+            <bar-chart value="11"></bar-chart>
           
         </dd>
       
@@ -1177,7 +1178,7 @@
           By jointly tackling the negative impact of the economic and financial crisis 
 
           
-            <span>22%</span>
+            <bar-chart value="22"></bar-chart>
           
         </dd>
       
@@ -1187,7 +1188,7 @@
           By reducing inequalities between richer and poorer countries and regions 
 
           
-            <span>23%</span>
+            <bar-chart value="23"></bar-chart>
           
         </dd>
       
@@ -1197,7 +1198,7 @@
           By facing together the consequences of the migratory flows and of the refugees&#39; crisis 
 
           
-            <span>24%</span>
+            <bar-chart value="24"></bar-chart>
           
         </dd>
       
@@ -1207,11 +1208,13 @@
           By defining a common approach to the climate and environmental challenges 
 
           
-            <span>19%</span>
+            <bar-chart value="19"></bar-chart>
           
         </dd>
       
       
+
+      <hr style="margin: 50px"/>
     
     
   
@@ -1222,21 +1225,8 @@
         <dd data-value="" style="--value:;">
           By showing greater acceptance of the diversities that exists among the different countries 
 
-          
-            <bar-chart value=""></bar-chart>
-            <cor-bar-graph-choices class="cor-bar-graph">
-              <ul class="cor-bar-graph__bar--multichoice p-0">
-                
-                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--1 text-center" data-choice-value="23" title="By jointly tackling the negative impact of the economic and financial crisis" style="--choice-value:23;">23%</li>
-                
-                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--2 text-center" data-choice-value="23" title="By reducing inequalities between richer and poorer countries and regions" style="--choice-value:23;">23%</li>
-                
-                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--3 text-center" data-choice-value="24" title="By facing together the consequences of the migratory flows and of the refugees&#39; crisis" style="--choice-value:24;">24%</li>
-                
-                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--4 text-center" data-choice-value="19" title="By defining a common approach to the climate and environmental challenges" style="--choice-value:19;">19%</li>
-                
-              </ul>
-            </cor-bar-graph-choices>
+          DDD
+            <multi-bar-chart values="23,23,24,19,"></multi-bar-chart>
           
         </dd>
       
@@ -1246,7 +1236,7 @@
           By jointly tackling the negative impact of the economic and financial crisis 
 
           
-            <span>22%</span>
+            <bar-chart value="22"></bar-chart>
           
         </dd>
       
@@ -1256,7 +1246,7 @@
           By reducing inequalities between richer and poorer countries and regions 
 
           
-            <span>23%</span>
+            <bar-chart value="23"></bar-chart>
           
         </dd>
       
@@ -1266,7 +1256,7 @@
           By facing together the consequences of the migratory flows and of the refugees&#39; crisis 
 
           
-            <span>24%</span>
+            <bar-chart value="24"></bar-chart>
           
         </dd>
       
@@ -1276,11 +1266,13 @@
           By defining a common approach to the climate and environmental challenges 
 
           
-            <span>19%</span>
+            <bar-chart value="19"></bar-chart>
           
         </dd>
       
       
+
+      <hr style="margin: 50px"/>
     
     
   
@@ -1292,7 +1284,7 @@
           By showing greater acceptance of the diversities that exists among the different countries 
 
           
-            <span>11%</span>
+            <bar-chart value="11"></bar-chart>
           
         </dd>
       
@@ -1302,7 +1294,7 @@
           By jointly tackling the negative impact of the economic and financial crisis 
 
           
-            <span>22%</span>
+            <bar-chart value="22"></bar-chart>
           
         </dd>
       
@@ -1312,7 +1304,7 @@
           By reducing inequalities between richer and poorer countries and regions 
 
           
-            <span>23%</span>
+            <bar-chart value="23"></bar-chart>
           
         </dd>
       
@@ -1322,7 +1314,7 @@
           By facing together the consequences of the migratory flows and of the refugees&#39; crisis 
 
           
-            <span>24%</span>
+            <bar-chart value="24"></bar-chart>
           
         </dd>
       
@@ -1332,19 +1324,21 @@
           By defining a common approach to the climate and environmental challenges 
 
           
-            <span>19%</span>
+            <bar-chart value="19"></bar-chart>
           
         </dd>
       
       
+
+      <hr style="margin: 50px"/>
     
+    
+
     
   
-</cor-bar-graph>
+</div>
 
-<script src="https://d3js.org/d3.v6.min.js"></script>
-
-<script src="/dist/js/survey.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cor-web/cor-design-system/dist/bundle.js"></script>
 
                         </div>
                     </div>

@@ -7,7 +7,7 @@ templateClass: tmpl-home
 
 <cor-word-cloud class="cor-word-cloud"></cor-word-cloud>
 
-<cor-bar-graph class="cor-bar-graph">
+<div>
   
   {% for item in survey %}
   
@@ -18,26 +18,21 @@ templateClass: tmpl-home
         <dd data-value="{{response.value}}" style="--value:{{response.value}};">
           {{response.text}} 
 
-          {% if response.choices %}
-            <bar-chart value="{{choice.value}}"></bar-chart>
-            <cor-bar-graph-choices class="cor-bar-graph">
-              <ul class="cor-bar-graph__bar--multichoice p-0">
-                {% for choice in response.choices %}
-                <li class="cor-bar-graph__bar--multichoice__item list-none cor-bar-graph__bar--multichoice__bg--{{ loop.index }} text-center" data-choice-value="{{choice.value}}" title="{{choice.text}}" style="--choice-value:{{choice.value}};">{{choice.value}}%</li>
-                {% endfor %}
-              </ul>
-            </cor-bar-graph-choices>
+          {% if response.choices %}DDD
+            <multi-bar-chart values="{% for choice in response.choices %}{{choice.value}},{% endfor %}"></multi-bar-chart>
           {% else %}
-            <span>{{response.value}}%</span>
+            <bar-chart value="{{response.value}}"></bar-chart>
           {% endif %}
         </dd>
       
       {% endfor %}
+
+      <hr style="margin: 50px"/>
     
     {% endfor %}
+
+    
   
-</cor-bar-graph>
+</div>
 
-<script src="https://d3js.org/d3.v6.min.js"></script>
-
-<script src="{{ '/dist/js/survey.js' | url }}" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cor-web/cor-design-system/dist/bundle.js"></script>
