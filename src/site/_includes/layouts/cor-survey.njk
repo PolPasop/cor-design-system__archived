@@ -3,55 +3,71 @@ layout: layouts/cor-base.njk
 templateClass: tmpl-home
 ---
 
-{{ content | safe }}
 
-<cor-word-cloud class="cor-word-cloud"></cor-word-cloud>
 
-<div>
-  
-  {% for item in survey %}
-  
-    <dt>{{item.question}}</dt>
+<!-- <cor-word-cloud class="cor-word-cloud"></cor-word-cloud> -->
+<div class="bg-white">
+  <div class="cor-grid">
+      <div class="cor-box">
+        <div class="cor-stack">
+            <h1 class="cor-heading--1">Survey</h1>
+            <p>Dolore exercitation elit nostrud labore proident elit. Enim enim qui elit veniam duis eu irure cupidatat magna officia culpa magna. Elit ex amet laboris nulla quis Lorem aute deserunt. Nisi eiusmod ut aute reprehenderit magna proident ad duis. Nulla dolor consectetur dolor officia mollit velit. Occaecat veniam pariatur sit labore esse nisi irure ex aute fugiat excepteur.</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://placeimg.com/1000/1000/nature" alt=""/>
+      </div>
+  </div>
+
+  <div class="cor-center">
+    <dl class="cor-stack">
+    
+      {% for item in survey %}
       
-      {% for response in item.responses %}
-      
-        <dd>
+        <dt>{{item.question}}</dt>
           
+          {% for response in item.responses %}
+          
+            <dd>
+              
 
-          {% if response.choices %}
-            
-            {# Start Multi bar graph #}
-            
-            {{response.text}}
+              {% if response.choices %}
+                
+                {# Start Multi bar graph #}
+                
+                {{response.text}}
 
-            <multi-bar-chart>
-              {% for choice in response.choices %}
-                <multi-bar-item value="{{choice.value}}">{{choice.text}} <span>{{choice.value}}%</span></multi-bar-item>
-              {% endfor %}
-            </multi-bar-chart>
+                <multi-bar-chart>
+                  {% for choice in response.choices %}
+                    <multi-bar-item value="{{choice.value}}">{{choice.text}} <span>{{choice.value}}%</span></multi-bar-item>
+                  {% endfor %}
+                </multi-bar-chart>
 
-            {# End Multi bar graph #}
+                {# End Multi bar graph #}
 
-          {% else %}
+              {% else %}
 
-            {# Start Simple bar graph #}
-            {{response.text}} <span>{{response.value}}%</span>
+                {# Start Simple bar graph #}
+                {{response.text}} <span>{{response.value}}%</span>
 
-            <bar-chart value="{{response.value}}"></bar-chart>
+                <bar-chart value="{{response.value}}"></bar-chart>
 
-            {# End Simple bar graph #}
-          {% endif %}
-        </dd>
+                {# End Simple bar graph #}
+              {% endif %}
+            </dd>
+          
+          {% endfor %}
+
+          {# To delete later when style is applied #}
+          <hr style="margin: 50px"/>
+        
+        {% endfor %}
+
+        
       
-      {% endfor %}
-
-      {# To delete later when style is applied #}
-      <hr style="margin: 50px"/>
-    
-    {% endfor %}
-
-    
+    </dl>
+  </div>
   
 </div>
 
-
+{{ content | safe }}
