@@ -22,76 +22,99 @@
         "text": "By defining a common approach to the climate and environmental challenges",
         "value": 19
       }
-    ],
-    "typeofvisualisation": "bar"
+    ]
   },
   {
     "question": "If no, how should european countries show more solidarity? ",
     "responses": [
       {
-        "text": "By showing greater acceptance of the diversities that exists among the different countries",
+        "text": "la sécurité",
         "choices": [
           {
-            "text": "By jointly tackling the negative impact of the economic and financial crisis",
-            "value": 23
+            "text": "L'union européenne",
+            "value": 30
           },
           {
-            "text": "By reducing inequalities between richer and poorer countries and regions",
-            "value": 23
-          },
-          {
-            "text": "By facing together the consequences of the migratory flows and of the refugees' crisis",
+            "text": "Le gouvernement national",
             "value": 24
           },
           {
-            "text": "By defining a common approach to the climate and environmental challenges",
+            "text": "votre ville ou votre commune",
             "value": 19
+          },
+          {
+            "text": "votre région",
+            "value": 14
           }
         ]
       },
       {
-        "text": "By jointly tackling the negative impact of the economic and financial crisis",
-        "value": 22
+        "text": "le chômage",
+        "choices": [
+          {
+            "text": "L'union européenne",
+            "value": 30
+          },
+          {
+            "text": "Le gouvernement national",
+            "value": 24
+          },
+          {
+            "text": "votre ville ou votre commune",
+            "value": 19
+          },
+          {
+            "text": "votre région",
+            "value": 14
+          }
+        ]
       },
       {
-        "text": "By reducing inequalities between richer and poorer countries and regions",
-        "value": 23
+        "text": "l'environnement",
+        "choices": [
+          {
+            "text": "By jointly tackling the negative impact of the economic and financial crisis",
+            "value": 30
+          },
+          {
+            "text": "By reducing inequalities between richer and poorer countries and regions",
+            "value": 24
+          },
+          {
+            "text": "By facing together the consequences of the migratory flows and of the refugees' crisis",
+            "value": 19
+          },
+          {
+            "text": "By defining a common approach to the climate and environmental challenges",
+            "value": 14
+          },
+          {
+            "text": "By defining a common approach to the climate and environmental challenges",
+            "value": 13
+          }
+        ]
       },
       {
-        "text": "By facing together the consequences of the migratory flows and of the refugees' crisis",
-        "value": 24
-      },
-      {
-        "text": "By defining a common approach to the climate and environmental challenges",
-        "value": 19
+        "text": "La mobilité",
+        "choices": [
+          {
+            "text": "L'union européenne",
+            "value": 30
+          },
+          {
+            "text": "Le gouvernement national",
+            "value": 24
+          },
+          {
+            "text": "votre ville ou votre commune",
+            "value": 19
+          },
+          {
+            "text": "votre région",
+            "value": 14
+          }
+        ]
       }
-    ],
-    "typeofvisualisation": "bar"
-  },
-  {
-    "question": "If no, how should european countries show more solidarity? ",
-    "responses": [
-      {
-        "text": "By showing greater acceptance of the diversities that exists among the different countries",
-        "value": 11
-      },
-      {
-        "text": "By jointly tackling the negative impact of the economic and financial crisis",
-        "value": 22
-      },
-      {
-        "text": "By reducing inequalities between richer and poorer countries and regions",
-        "value": 23
-      },
-      {
-        "text": "By facing together the consequences of the migratory flows and of the refugees' crisis",
-        "value": 24
-      },
-      {
-        "text": "By defining a common approach to the climate and environmental challenges",
-        "value": 19
-      }
-    ],
-    "typeofvisualisation": "bar"
+    ]
   }
 ]

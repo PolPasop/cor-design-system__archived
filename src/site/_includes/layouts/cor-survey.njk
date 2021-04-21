@@ -16,17 +16,36 @@ templateClass: tmpl-home
       {% for response in item.responses %}
       
         <dd>
-          {{response.text}} 
+          
 
           {% if response.choices %}
-            <multi-bar-chart values="{% for choice in response.choices %}{{choice.value}},{% endfor %}"></multi-bar-chart>
+            
+            {# Start Multi bar graph #}
+            
+            {{response.text}}
+
+            <multi-bar-chart>
+              {% for choice in response.choices %}
+                <multi-bar-item value="{{choice.value}}">{{choice.text}} <span>{{choice.value}}%</span></multi-bar-item>
+              {% endfor %}
+            </multi-bar-chart>
+
+            {# End Multi bar graph #}
+
           {% else %}
+
+            {# Start Simple bar graph #}
+            {{response.text}} <span>{{response.value}}%</span>
+
             <bar-chart value="{{response.value}}"></bar-chart>
+
+            {# End Simple bar graph #}
           {% endif %}
         </dd>
       
       {% endfor %}
 
+      {# To delete later when style is applied #}
       <hr style="margin: 50px"/>
     
     {% endfor %}
@@ -35,4 +54,4 @@ templateClass: tmpl-home
   
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@cor-web/cor-design-system/dist/bundle.js"></script>
+
