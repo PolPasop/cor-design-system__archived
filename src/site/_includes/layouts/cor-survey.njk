@@ -18,7 +18,7 @@ templateClass: tmpl-home
         <dd data-value="{{response.value}}" style="--value:{{response.value}};">
           {{response.text}} 
 
-          {% if response.choices %}DDD
+          {% if response.choices %}
             <multi-bar-chart values="{% for choice in response.choices %}{{choice.value}},{% endfor %}"></multi-bar-chart>
           {% else %}
             <bar-chart value="{{response.value}}"></bar-chart>
