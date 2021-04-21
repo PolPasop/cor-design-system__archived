@@ -19,6 +19,7 @@ templateClass: tmpl-home
           {{response.text}} 
 
           {% if response.choices %}
+            <bar-chart value="{{choice.value}}"></bar-chart>
             <cor-bar-graph-choices class="cor-bar-graph">
               <ul class="cor-bar-graph__bar--multichoice p-0">
                 {% for choice in response.choices %}
